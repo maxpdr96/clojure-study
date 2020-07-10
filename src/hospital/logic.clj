@@ -5,7 +5,7 @@
   (-> hospital
   (get ,,, departamento)
   count ,,,
-  (<= ,,, 5)))
+  (< ,,, 5)))
 
 
 
@@ -27,12 +27,12 @@
 
 (defn chega-em-pausado-logando
   [hospital departamento pessoa]
-  (println "Tentando adicionar a pessoa" pessoa)
+  ; (println "Tentando adicionar a pessoa" pessoa)
   (Thread/sleep (* (rand) 2000))
   (if (cabe-na-fila? hospital departamento)
     (do
       ;(Thread/sleep (* (rand) 2000))
-      (println "Dando update" pessoa)
+      ;(println "Dando update" pessoa)
       (update hospital departamento conj pessoa)
       )
 

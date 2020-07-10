@@ -83,3 +83,7 @@
 (println (update precos 0 inc))                             ; Update valor na posicao 0 do vetor
 (println (update precos 1 dec))                             ; Update valor na posicao 1 do vetor
 
+
+(doseq [x [-1 0 1]
+        y [1 2 3]]
+  (println (* x y)))
