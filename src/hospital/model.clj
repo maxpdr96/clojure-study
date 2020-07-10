@@ -1,9 +1,9 @@
 (ns hospital.model)
 
-(def empty_queue clojure.lang.PersistentQueue/EMPTY)
+(def empty-queue clojure.lang.PersistentQueue/EMPTY)
 
 (defn new-hospital []
-  {:espera empty_queue
-   :laboratorio1 empty_queue
-   :laboratorio2 empty_queue
-   :laboratorio3 empty_queue})
+  {:espera empty-queue
+   :laboratorio1 empty-queue
+   :laboratorio2 empty-queue
+   :laboratorio3 empty-queue})

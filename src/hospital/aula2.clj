@@ -9,20 +9,20 @@
 
 ; deref pode ser escrito com @
 (defn testa-atomao []
-  (let [hospital-teste (atom {:espera h.model/empty_queue})]
+  (let [hospital-teste (atom {:espera h.model/empty-queue})]
     (println hospital-teste)
     (pprint hospital-teste)
     (pprint (deref hospital-teste))
     (pprint @hospital-teste)
 
-    (pprint (assoc @hospital-teste :laboratorio1 h.model/empty_queue))
+    (pprint (assoc @hospital-teste :laboratorio1 h.model/empty-queue))
     (pprint @hospital-teste)
 
     ;maneira de alterar conteudo dentro de um atomo
-    (swap! hospital-teste assoc :laboratorio1 h.model/empty_queue)
+    (swap! hospital-teste assoc :laboratorio1 h.model/empty-queue)
     (pprint @hospital-teste)
 
-    (swap! hospital-teste assoc :laboratorio2 h.model/empty_queue)
+    (swap! hospital-teste assoc :laboratorio2 h.model/empty-queue)
     (pprint @hospital-teste)
 
     ;update tradicional imutavel, com deref, que nao trara efeito
