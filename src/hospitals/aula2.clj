@@ -10,7 +10,8 @@
 ;  (deve-assinar-pre-autorizacao? [paciente, procedimento, valor]
 ;    (>= valor 50)))
 
-(defprotocol Cobravel (deve-assinar-pre-autorizacao? [paciente procedimento valor]))
+(defprotocol Cobravel
+  (deve-assinar-pre-autorizacao? [paciente procedimento valor]))
 
 (extend-type PacienteParticular
   Cobravel
